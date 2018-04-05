@@ -1,0 +1,6 @@
+describe('Alert', () => {
+  it('renders', () => {
+
+  });
+
+});

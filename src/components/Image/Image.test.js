@@ -1,0 +1,6 @@
+describe('Image', () => {
+  it('renders', () => {
+
+  });
+
+});
