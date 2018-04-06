@@ -28,10 +28,8 @@ export class ContactForm extends Component {
 
 ContactForm.propTypes = {};
 
-export default connect((state) => {
-  return {
-    ...state,
-  };
-}, {
+export default connect(state => ({
+  ...state,
+}), {
 
 })(ContactForm);

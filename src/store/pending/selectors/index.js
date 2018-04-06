@@ -4,5 +4,5 @@
  */
 
 export default {
-  ...makeModelSelectors({ model: `pending` }),
+  ...makeModelSelectors({ model: 'pending' }),
 };

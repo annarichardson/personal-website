@@ -28,10 +28,8 @@ export class Header extends Component {
 
 Header.propTypes = {};
 
-export default connect((state) => {
-  return {
-    ...state,
-  };
-}, {
+export default connect(state => ({
+  ...state,
+}), {
 
 })(Header);

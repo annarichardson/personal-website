@@ -2,5 +2,4 @@ describe('Home', () => {
   it('renders', () => {
 
   });
-
 });

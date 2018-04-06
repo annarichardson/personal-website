@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import './Home.css';
@@ -28,10 +28,8 @@ export class Home extends Component {
 
 Home.propTypes = {};
 
-export default connect((state) => {
-  return {
-    ...state,
-  };
-}, {
+export default connect((state) => ({
+  ...state,
+}), {
 
 })(Home);

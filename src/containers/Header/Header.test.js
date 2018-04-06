@@ -2,5 +2,4 @@ describe('Header', () => {
   it('renders', () => {
 
   });
-
 });

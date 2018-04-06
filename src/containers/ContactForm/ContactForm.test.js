@@ -2,5 +2,4 @@ describe('ContactForm', () => {
   it('renders', () => {
 
   });
-
 });

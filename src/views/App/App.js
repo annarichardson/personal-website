@@ -8,15 +8,10 @@ import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
+  Route,
 } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet';
-
-import AppWrap from 'pantheon-client/lib/components/AppWrap';
-import PageWrap from 'pantheon-client/lib/components/PageWrap';
-import EventRoute from 'pantheon-client/lib/components/EventRoute';
-
-import requiresAuth from 'pantheon-client/lib/hocs/requiresAuth';
 
 import routes from 'root/routes';
 
@@ -30,8 +25,6 @@ import routes from 'root/routes';
 //   Perf.printWasted();
 // }, 5000);
 
-const PrivateRoute = requiresAuth(EventRoute);
-
 /**
  * The App view wraps all other views in the React application, providing a
  * consistent look and feel across all views
@@ -40,32 +33,26 @@ export class App extends PureComponent {
   render() {
     return (
       <Router>
-        <AppWrap>
+        <div className="App">
           <Helmet>
             <title>
               Your App
             </title>
           </Helmet>
-          <PageWrap>
+          <div className="page-wrap">
             <Switch>
               {
-                routes.map((r) => {
-                  const Route = r.private
-                    ? PrivateRoute
-                    : EventRoute;
-
-                  return <Route key={ r.path } { ...r } />;
-                })
+                routes.map((r) => <Route key={r.path} {...r} />)
               }
             </Switch>
-          </PageWrap>
-        </AppWrap>
+          </div>
+        </div>
       </Router>
     );
   }
 }
 
-if (process.env.NODE_ENV !== `production`) {
+if (process.env.NODE_ENV !== 'production') {
   const PropTypes = require(`prop-types`); // eslint-disable-line
   App.propTypes = {
 

@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -15,18 +15,16 @@ const plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || ''),
     'process.env.API_ENV': JSON.stringify(process.env.API_ENV || ''),
-    '__DEV__': !isProd,
+    __DEV__: !isProd,
   }),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    filename: isProd ? 'vendor[chunkhash].js' : 'vendor.js',
+  new MiniCssExtractPlugin({
+    filename: isProd ? `styles[chunkhash].css` : `styles.css`,
   }),
-  new ExtractTextPlugin(isProd ? 'styles[chunkhash].css' : 'styles.css'),
   new StyleLintPlugin({
-    files: '**/*.css'
+    files: '**/*.css',
   }),
   new HtmlWebpackPlugin({
-    title: 'A Website Title',
+    title: "Anna's Website",
     template: path.resolve(__dirname, './src/index.ejs'),
     filename: isProd ? '../index.html' : 'index.html',
     hash: isProd,
@@ -52,35 +50,20 @@ if (process.env.NODE_ENV === 'production' && !process.env.ANALYZE_BUNDLE) {
 }
 
 module.exports = {
-  devtool: isProd ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
+  mode: isProd ? 'production' : 'development',
   context: path.resolve(__dirname, './src'),
   entry: {
+    polyfill: 'babel-polyfill',
     app: './index',
-    vendor: [
-      'axios',
-      'lodash.omit',
-      'lodash.uniq',
-      'lodash.without',
-      'react',
-      'react-dom',
-      'react-helmet',
-      'redux',
-      'react-redux',
-      'react-router-dom',
-      'reselect',
-      'styled-components',
-      'uuid'
-    ]
   },
   output: {
-    path: path.join(__dirname, './build'),
     filename: isProd ? '[name][chunkhash].js' : '[name].js',
-    publicPath: '/build/'
+    publicPath: '/build/',
   },
   devServer: {
     publicPath: 'http://localhost:3000/build/',
     port: 3000,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -88,29 +71,27 @@ module.exports = {
         test: /\.js$/,
         exclude: [/node_modules/],
         enforce: 'pre',
-        loader: 'eslint-loader'
+        loader: 'eslint-loader',
       },
       {
         test: /\.js$/,
-        exclude: /node_modules\/(?!(pantheon-client|react-icons)\/).*/,
+        exclude: /node_modules\/(?!(react-icons)\/).*/,
         loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          loader: [
-            'css-loader',
-            'postcss-loader'
-          ]
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        loader: 'svg-inline-loader',
       },
       {
         test: /\.(eot|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
-        loader: 'url-loader'
+        loader: 'url-loader',
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -119,11 +100,16 @@ module.exports = {
             loader: 'image-webpack-loader?bypassOnDebug',
           },
           {
-            loader: 'file-loader'
-          }
-        ]
-      }
-    ]
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: `all`,
+    },
   },
   resolve: {
     extensions: ['.js', '.css', '.svg', '.png'],
@@ -135,7 +121,7 @@ module.exports = {
       root: path.resolve(__dirname, 'src/'),
       store: path.resolve(__dirname, 'src/store/'),
       views: path.resolve(__dirname, 'src/views/'),
-    }
+    },
   },
   plugins: plugins,
 };

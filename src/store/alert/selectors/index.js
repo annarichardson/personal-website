@@ -4,5 +4,5 @@
  */
 
 export default {
-  ...makeModelSelectors({ model: `alert` }),
+  ...makeModelSelectors({ model: 'alert' }),
 };

@@ -2,5 +2,4 @@ describe('Map', () => {
   it('renders', () => {
 
   });
-
 });

@@ -2,5 +2,4 @@ describe('Alert', () => {
   it('renders', () => {
 
   });
-
 });

@@ -28,10 +28,8 @@ export class Alert extends Component {
 
 Alert.propTypes = {};
 
-export default connect((state) => {
-  return {
-    ...state,
-  };
-}, {
+export default connect(state => ({
+  ...state,
+}), {
 
 })(Alert);

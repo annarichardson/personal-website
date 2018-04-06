@@ -28,10 +28,8 @@ export class Map extends Component {
 
 Map.propTypes = {};
 
-export default connect((state) => {
-  return {
-    ...state,
-  };
-}, {
+export default connect(state => ({
+  ...state,
+}), {
 
 })(Map);

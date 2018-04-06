@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+
 const app = express();
 
 // Static file server
@@ -13,10 +14,10 @@ app.use('/ping/', (req, res) => {
 
 // Any route not matching requesting a static file should send the index.html
 // file
-app.get(/\/(.*)/, function(req, res) {
+app.get(/\/(.*)/, (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(process.env.PORT || 80, function () {
+app.listen(process.env.PORT || 80, () => {
   console.log('UI server started!');
-})
+});
