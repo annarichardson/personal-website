@@ -6,13 +6,13 @@ import {
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 
-import alert from './alert/reducers';
+// import alert from './alert/reducers';
 import pending from './pending/reducers';
 
 export const history = createHistory();
 
 const rootReducer = combineReducers({
-  alert,
+  // alert,
   pending,
 });
 
