@@ -1,0 +1,82 @@
+/**
+ * Profile.js
+ * Written by: Anna Richardson
+ */
+
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+
+import profile from 'assets/profile.jpg';
+
+import {
+  ProfileContainer,
+  Header,
+  Line,
+  Wrapper,
+  SectionWrapper,
+  SubHeader,
+  Content,
+  ContentHeader,
+  ProfileImage,
+} from './Profile.styles';
+
+export default class Profile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <ProfileContainer>
+        <Header>
+          Profile
+        </Header>
+        <Line />
+        <Wrapper>
+          <SectionWrapper>
+            <SubHeader>
+              About Me
+            </SubHeader>
+            <Content>
+              {'I am a developer, chronic puzzle-seeker and lifelong learner. \
+              When I’m not building cool stuff, you can find me exploring the outdoors skiing, \
+              rock climbing, or bicycling. Want to work together? I’d love to hear from you.'}
+            </Content>
+          </SectionWrapper>
+          <SectionWrapper style={ { 'text-align': 'center' } }>
+            <ProfileImage height={ 200 } width={ 200 } src={ profile } alt="profile image" />
+          </SectionWrapper>
+          <SectionWrapper>
+            <SubHeader>
+              Details
+            </SubHeader>
+            <ContentHeader>
+              Name:
+            </ContentHeader>
+            <Content>
+              Anna Richardson
+            </Content>
+            <ContentHeader>
+              Current Job Title:
+            </ContentHeader>
+            <Content>
+              Senior Software Engineer
+            </Content>
+            <ContentHeader>
+              Location:
+            </ContentHeader>
+            <Content>
+              Boston, MA
+            </Content>
+          </SectionWrapper>
+        </Wrapper>
+      </ProfileContainer>
+    );
+  }
+}
+
+Profile.propTypes = {};
+
