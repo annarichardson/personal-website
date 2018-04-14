@@ -1,21 +1,16 @@
 /* theme.js
  * Written by: Anna Richardson
  *
- * Exports a theme object, which sets default styles for pantheon components
- * throughout the app
  */
 
-export default {
-  /*
-   * AppWrap (global) Themes
-   */
-  fontFamily: 'sans-serif',
-  fontSize: '20px;',
+export const DARK_GREY = `#414042`;
+export const MEDIUM_GREY = `#6D6E71`;
+export const LIGHT_GREY = `#F2F2F2`;
+export const PRIMARY_COLOR = `#32967A`;
 
-  /*
-   * Button Themes
-   */
-  buttonColorPrimary: '#ff0',
-  buttonColorSecondary: '#00f',
-  buttonBorderRadius: '5px',
+export default {
+  DARK_GREY,
+  MEDIUM_GREY,
+  LIGHT_GREY,
+  PRIMARY_COLOR,
 };

@@ -8,6 +8,8 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
+import Profile from 'containers/Profile';
+
 import {
   ImageSection,
   Name,
@@ -35,6 +37,7 @@ export class Home extends Component {
             </LastName>
           </Name>
         </ImageSection>
+        <Profile />
       </HomeContainer>
     );
   }

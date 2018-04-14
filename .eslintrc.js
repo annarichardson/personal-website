@@ -25,6 +25,7 @@ module.exports = {
     "react/jsx-boolean-value": [0],
     "no-nested-ternary": [0],
     "react/prefer-stateless-function": [0],
+    "no-confusing-arrow": [0],
   },
   globals: {
     __DEV__: true,
