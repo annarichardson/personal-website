@@ -1,4 +1,4 @@
-describe('Header', () => {
+describe('Menu', () => {
   it('renders', () => {
 
   });

@@ -7,7 +7,14 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import './Home.css';
+
+import {
+  ImageSection,
+  Name,
+  HomeContainer,
+  LastName,
+} from './Home.styles';
+
 
 export class Home extends Component {
   constructor(props) {
@@ -19,9 +26,16 @@ export class Home extends Component {
 
   render() {
     return (
-      <div className="Home">
-        Home
-      </div>
+      <HomeContainer>
+        <ImageSection>
+          <Name>
+            Anna
+            <LastName>
+              {' '}Richardson
+            </LastName>
+          </Name>
+        </ImageSection>
+      </HomeContainer>
     );
   }
 }

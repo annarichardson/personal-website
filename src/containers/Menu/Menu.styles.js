@@ -1,8 +1,5 @@
 /**
- * App.css
+ * Header.styles.js
  * Written by: Anna Richardson
  */
 
-/* .App {
-
-} */

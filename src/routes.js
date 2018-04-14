@@ -8,7 +8,7 @@ import Home from 'views/Home';
 
 export default [
   {
-    path: '/Home',
+    path: '/',
     component: Home,
   },
 ];
