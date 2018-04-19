@@ -1,4 +1,4 @@
-describe('Logo', () => {
+describe('HeaderText', () => {
   it('renders', () => {
 
   });

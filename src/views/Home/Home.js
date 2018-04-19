@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Profile from 'containers/Profile';
+import Experience from 'containers/Experience';
 
 import {
   ImageSection,
@@ -38,6 +39,7 @@ export class Home extends Component {
           </Name>
         </ImageSection>
         <Profile />
+        <Experience />
       </HomeContainer>
     );
   }

@@ -33,10 +33,11 @@ const Name = styled.h1`
   font-size: 3rem;
   padding-bottom: 5px;
   border-bottom: solid white 0.5px;
+  font-weight: 600;
 `;
 
 const LastName = styled.span`
-  font-weight: 400;
+  font-weight: 300;
 `;
 
 const Line = styled(HorizontalLine)`
