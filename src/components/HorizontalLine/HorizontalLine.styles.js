@@ -7,11 +7,13 @@
 
 import styled from 'styled-components';
 
-const Line = styled.div`
-  background-color: white;
-  height: 1px;
-  width: 100%;
-  margin-top: .6rem;
+import { DARK_GREY } from 'root/theme';
+
+const Line = styled.hr`
+  border: 0;
+  border-top: 1px solid ${DARK_GREY};
+  opacity: 0.2;
+  margin-bottom: 2rem;
 `;
 
 export default Line;
