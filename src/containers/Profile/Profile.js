@@ -6,12 +6,12 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
+import HeaderText from 'components/HeaderText';
+
 import profile from 'assets/profile.jpg';
 
 import {
   ProfileContainer,
-  Header,
-  Line,
   Wrapper,
   SectionWrapper,
   SubHeader,
@@ -31,10 +31,9 @@ export default class Profile extends Component {
   render() {
     return (
       <ProfileContainer>
-        <Header>
+        <HeaderText>
           Profile
-        </Header>
-        <Line />
+        </HeaderText>
         <Wrapper>
           <SectionWrapper>
             <SubHeader>
@@ -46,7 +45,7 @@ export default class Profile extends Component {
               rock climbing, or bicycling. Want to work together? I’d love to hear from you.'}
             </Content>
           </SectionWrapper>
-          <SectionWrapper style={ { 'text-align': 'center' } }>
+          <SectionWrapper style={ { textAlign: 'center' } }>
             <ProfileImage height={ 200 } width={ 200 } src={ profile } alt="profile image" />
           </SectionWrapper>
           <SectionWrapper>

@@ -10,7 +10,6 @@ import Image from 'components/Image';
 import { MEDIUM_GREY, DARK_GREY, PRIMARY_COLOR } from 'root/theme';
 
 const ProfileContainer = styled.div`
-  height: 100%;
   max-width: 1200px;
   padding: 40px 180px;
   margin-left: auto;
@@ -50,12 +49,15 @@ const SectionWrapper = styled.div`
 const SubHeader = styled.h2`
   color: ${PRIMARY_COLOR};
   font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
 `;
 
 const Content = styled.p`
   color: ${MEDIUM_GREY};
   font-family: 'Open Sans', sans-serif;
   margin-top: 5px;
+  line-height: 1.5;
+  font-weight: 200;
 `;
 
 const ProfileImage = styled(Image)`
