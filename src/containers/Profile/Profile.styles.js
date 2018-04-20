@@ -38,7 +38,6 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: felx-start;
-
 `;
 
 const SectionWrapper = styled.div`
