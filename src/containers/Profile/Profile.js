@@ -30,7 +30,7 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <ProfileContainer>
+      <ProfileContainer id="profile">
         <HeaderText>
           Profile
         </HeaderText>

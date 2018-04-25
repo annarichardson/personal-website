@@ -127,7 +127,7 @@ export default class Experience extends Component {
     });
 
     return (
-      <ExperienceContainer>
+      <ExperienceContainer id="experience">
         <TextWrapper>
           <HeaderText>
             Experience

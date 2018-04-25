@@ -4,10 +4,13 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import './Menu.css';
+import {
+  MenuWrapper,
+  MenuItem,
+} from './Menu.styles';
 
 export class Menu extends Component {
   constructor(props) {
@@ -19,16 +22,24 @@ export class Menu extends Component {
 
   render() {
     return (
-      <div className="Menu">
-        Menu
-      </div>
+      <MenuWrapper>
+        <MenuItem href="#profile">
+          Profile
+        </MenuItem>
+        <MenuItem href="#experience">
+          Experience
+        </MenuItem>
+        <MenuItem href="#skills">
+          Skills
+        </MenuItem>
+      </MenuWrapper>
     );
   }
 }
 
 Menu.propTypes = {};
 
-export default connect(state => ({
+export default connect((state) => ({
   ...state,
 }), {
 

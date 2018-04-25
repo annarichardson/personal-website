@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import Profile from 'containers/Profile';
 import Experience from 'containers/Experience';
 import Skills from 'containers/Skills';
+import Menu from 'containers/Menu';
 
 import {
   ImageSection,
@@ -31,6 +32,7 @@ export class Home extends Component {
   render() {
     return (
       <HomeContainer>
+        <Menu />
         <ImageSection>
           <Name>
             Anna

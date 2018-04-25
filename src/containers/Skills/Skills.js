@@ -45,10 +45,6 @@ const SKILLS = [
     rating: 4,
   },
   {
-    title: "C",
-    rating: 3,
-  },
-  {
     title: "C++",
     rating: 3,
   },
@@ -87,7 +83,7 @@ export default class Skills extends Component {
       return <Skill data={ s } key={ s.title } />;
     });
     return (
-      <SkillsWrapper>
+      <SkillsWrapper id="skills">
         <TextWrapper>
           <HeaderText>
             Skills
