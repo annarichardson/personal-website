@@ -1,5 +1,6 @@
-describe('ContactForm', () => {
+describe('Contact', () => {
   it('renders', () => {
 
   });
+
 });
