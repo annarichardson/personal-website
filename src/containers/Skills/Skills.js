@@ -4,6 +4,7 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
 import Skill from 'components/Skill';
@@ -109,5 +110,7 @@ export default class Skills extends Component {
   }
 }
 
-Skills.propTypes = {};
+Skills.propTypes = {
+  getRef: PropTypes.func,
+};
 

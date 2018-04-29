@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
 import ExperienceItem from 'components/ExperienceItem';
@@ -160,5 +160,7 @@ export default class Experience extends Component {
   }
 }
 
-Experience.propTypes = {};
+Experience.propTypes = {
+  getRef: PropTypes.func,
+};
 
