@@ -28,9 +28,16 @@ export default class Profile extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.profile, `profile`);
+  }
+
   render() {
     return (
-      <ProfileContainer id="profile">
+      <ProfileContainer
+        id="profile"
+        innerRef={(node) => { this.profile = node; }}
+      >
         <HeaderText>
           Profile
         </HeaderText>

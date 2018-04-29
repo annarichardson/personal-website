@@ -28,9 +28,16 @@ export default class Contact extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.contact, `contact`);
+  }
+
   render() {
     return (
-      <ContactContainer>
+      <ContactContainer
+        id="contact"
+        innerRef={(node) => { this.contact = node; }}
+      >
         <SectionContainer>
           <Header>
             Contact

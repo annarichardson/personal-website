@@ -74,6 +74,10 @@ export default class Skills extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.skills, `skills`);
+  }
+
   render() {
     const halfWay = Math.ceil(SKILLS.length / 2);
     const skills1 = (SKILLS.slice(0, halfWay)).map((s) => {
@@ -83,7 +87,10 @@ export default class Skills extends Component {
       return <Skill data={ s } key={ s.title } />;
     });
     return (
-      <SkillsWrapper id="skills">
+      <SkillsWrapper
+        id="skills"
+        innerRef={(node) => { this.skills = node; }}
+      >
         <TextWrapper>
           <HeaderText>
             Skills

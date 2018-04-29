@@ -113,6 +113,10 @@ export default class Experience extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.experience, `experience`);
+  }
+
   render() {
     const workExperiences = WORK_EXPERIENCES.map((e) => {
       return <ExperienceItem data={ e } key={ e.title } />;
@@ -127,7 +131,10 @@ export default class Experience extends Component {
     });
 
     return (
-      <ExperienceContainer id="experience">
+      <ExperienceContainer
+        id="experience"
+        innerRef={(node) => { this.experience = node; }}
+      >
         <TextWrapper>
           <HeaderText>
             Experience

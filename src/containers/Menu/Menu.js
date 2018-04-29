@@ -4,9 +4,9 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
 import {
   MenuWrapper,
   MenuItem,
@@ -21,26 +21,32 @@ export class Menu extends Component {
   }
 
   render() {
+    const { selected } = this.props;
     return (
       <MenuWrapper>
-        <MenuItem href="#profile">
+        <MenuItem selected={ selected === `profile` } href="#profile">
           Profile
         </MenuItem>
-        <MenuItem href="#experience">
+        <MenuItem selected={ selected === `experience` } href="#experience">
           Experience
         </MenuItem>
-        <MenuItem href="#skills">
+        <MenuItem selected={ selected === `skills` } href="#skills">
           Skills
+        </MenuItem>
+        <MenuItem selected={ selected === `contact` } href="#contact">
+          Contact
         </MenuItem>
       </MenuWrapper>
     );
   }
 }
 
-Menu.propTypes = {};
+Menu.propTypes = {
+  selected: PropTypes.string,
+};
 
 export default connect((state) => ({
-  ...state,
+  selected: state.select.section,
 }), {
 
 })(Menu);
