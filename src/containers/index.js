@@ -1,11 +1,11 @@
 import Alert from './Alert';
-import ContactForm from './ContactForm';
+import Contact from './Contact';
 import Menu from './Menu';
 import Profile from './Profile';
 
 export default {
   Alert,
-  ContactForm,
+  Contact,
   Menu,
   Profile,
 };
