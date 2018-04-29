@@ -21,8 +21,8 @@ export default class HeaderText extends Component {
   render() {
     const { children, className } = this.props;
     return (
-      <div>
-        <Header className={ className } >
+      <div className={ className }>
+        <Header>
           { children }
         </Header>
         <HorizontalLine />

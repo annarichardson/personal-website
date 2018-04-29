@@ -12,6 +12,7 @@ import Profile from 'containers/Profile';
 import Experience from 'containers/Experience';
 import Skills from 'containers/Skills';
 import Menu from 'containers/Menu';
+import Contact from 'containers/Contact';
 
 import {
   ImageSection,
@@ -44,6 +45,7 @@ export class Home extends Component {
         <Profile />
         <Experience />
         <Skills />
+        <Contact />
       </HomeContainer>
     );
   }
