@@ -13,7 +13,10 @@ import {
 
 import { Helmet } from 'react-helmet';
 
+import Menu from 'containers/Menu';
+import MobileMenu from 'containers/MobileMenu';
 import routes from 'root/routes';
+import { TABLET_WIDTH } from 'utils';
 
 import {
   AppContainer,
@@ -25,7 +28,31 @@ import {
  * consistent look and feel across all views
  */
 export class App extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
+  componentDidMount() {
+    this.updateWindowWidth();
+    window.addEventListener(`resize`, this.updateWindowWidth);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(`resize`, this.updateWindowWidth);
+  }
+
+  updateWindowWidth = () => {
+    this.setState({ width: window.innerWidth });
+  }
+
   render() {
+    const { width } = this.state;
+    const menu = width > TABLET_WIDTH
+      ? <Menu />
+      : <MobileMenu />;
     return (
       <Router>
         <AppContainer>
@@ -35,6 +62,7 @@ export class App extends PureComponent {
             </title>
           </Helmet>
           <PageWrap>
+            { menu }
             <Switch>
               {
                 routes.map((r) => <Route key={r.path} {...r} />)

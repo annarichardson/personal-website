@@ -6,16 +6,11 @@
 import styled from 'styled-components';
 
 import Image from 'components/Image';
+import media from 'utils/media';
 
 import { MEDIUM_GREY, DARK_GREY, PRIMARY_COLOR } from 'root/theme';
 
 const ProfileContainer = styled.div`
-  max-width: 1200px;
-  padding: 40px 180px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1100px;
-  box-sizing: border-box;
 `;
 
 const Header = styled.h1`
@@ -38,17 +33,25 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: felx-start;
+  flex-wrap: wrap;
 `;
 
-const SectionWrapper = styled.div`
+const SectionContainer = styled.div`
   flex-basis: 30%;
   margin: 0 auto;
+  ${media.desktop`
+    flex-basis: 100%;
+  `}
 `;
 
 const SubHeader = styled.h2`
   color: ${PRIMARY_COLOR};
   font-family: 'Open Sans', sans-serif;
   margin-top: 0;
+  font-weight: 200;
+  ${media.desktop`
+    text-align: center;
+  `}
 `;
 
 const Content = styled.p`
@@ -57,11 +60,18 @@ const Content = styled.p`
   margin-top: 5px;
   line-height: 1.5;
   font-weight: 200;
+  ${media.desktop`
+    text-align: center;
+  `}
 `;
 
 const ProfileImage = styled(Image)`
   border-radius: 50%;
   border: solid 3px ${PRIMARY_COLOR};
+  ${media.desktop`
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  `}
 `;
 
 const ContentHeader = styled.p`
@@ -69,6 +79,9 @@ const ContentHeader = styled.p`
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   margin-bottom: 0;
+  ${media.desktop`
+    text-align: center;
+  `}
 `;
 
 export {
@@ -76,7 +89,7 @@ export {
   ProfileContainer,
   Line,
   Wrapper,
-  SectionWrapper,
+  SectionContainer,
   SubHeader,
   Content,
   ContentHeader,

@@ -4,6 +4,7 @@
  */
 
 import styled from 'styled-components';
+import media from 'utils/media';
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -30,6 +31,9 @@ const Name = styled.h1`
   padding-bottom: 5px;
   border-bottom: solid white 0.5px;
   font-weight: 600;
+  ${media.phone`
+    font-size: 2.25rem;
+  `}
 `;
 
 const LastName = styled.span`

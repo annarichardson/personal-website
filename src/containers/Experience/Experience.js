@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 import HeaderText from 'components/HeaderText';
 import ExperienceItem from 'components/ExperienceItem';
 import HorizontalLine from 'components/HorizontalLine';
+import SectionWrap from 'components/SectionWrap';
 
 import {
   ExperienceContainer,
-  TextWrapper,
   SubHeader,
 } from './Experience.styles';
 
@@ -135,7 +135,7 @@ export default class Experience extends Component {
         id="experience"
         innerRef={(node) => { this.experience = node; }}
       >
-        <TextWrapper>
+        <SectionWrap>
           <HeaderText>
             Experience
           </HeaderText>
@@ -154,7 +154,7 @@ export default class Experience extends Component {
           </SubHeader>
           { leadership }
           <HorizontalLine />
-        </TextWrapper>
+        </SectionWrap>
       </ExperienceContainer>
     );
   }

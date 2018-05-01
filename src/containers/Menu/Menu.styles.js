@@ -1,5 +1,5 @@
 /**
- * Header.styles.js
+ * Menu.styles.js
  * Written by: Anna Richardson
  */
 
@@ -13,6 +13,7 @@ const MenuWrapper = styled.div`
   top: 40%
   background-color: ${DARK_GREY};
   border-radius: 3px;
+  z-index: 1000;
 `;
 
 const MenuItem = styled.a`

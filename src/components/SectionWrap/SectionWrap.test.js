@@ -1,0 +1,5 @@
+describe('SectionWrap', () => {
+  it('renders', () => {
+
+  });
+});
