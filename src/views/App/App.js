@@ -20,16 +20,6 @@ import {
   PageWrap,
 } from './App.styles';
 
-// Uncomment the section below for performance testing
-// import Perf from 'react-addons-perf';
-
-// Perf.start();
-
-// setTimeout(() => {
-//   Perf.stop();
-//   Perf.printWasted();
-// }, 5000);
-
 /**
  * The App view wraps all other views in the React application, providing a
  * consistent look and feel across all views

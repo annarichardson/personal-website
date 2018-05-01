@@ -1,5 +1,0 @@
-describe('Alert', () => {
-  it('renders', () => {
-
-  });
-});

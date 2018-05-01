@@ -6,7 +6,6 @@ import {
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 
-// import alert from './alert/reducers';
 import select from './select/reducers';
 
 export const history = createHistory();

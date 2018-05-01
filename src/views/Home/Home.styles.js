@@ -4,8 +4,6 @@
  */
 
 import styled from 'styled-components';
-import HorizontalLine from 'components/HorizontalLine';
-import Profile from 'containers/Profile';
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -23,9 +21,6 @@ const ImageSection = styled.div`
   justify-content: center;
 `;
 
-const NameWrapper = styled.div`
-`;
-
 const Name = styled.h1`
   margin: 0 auto;
   display: inline-block;
@@ -41,23 +36,9 @@ const LastName = styled.span`
   font-weight: 300;
 `;
 
-const Line = styled(HorizontalLine)`
-  background-color: white;
-  width: 90%;
-  max-width: 450px;
-  margin: 0 auto;
-`;
-
-const ProfileSection = styled(Profile)`
-
-`;
-
 export {
   ImageSection,
-  NameWrapper,
   Name,
   HomeContainer,
   LastName,
-  Line,
-  ProfileSection,
 };
