@@ -7,7 +7,7 @@
     "lint-fix": "eslint --fix",
     "test": "jest",
     "build": "API_ENV=production NODE_ENV=production webpack -p",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
   },
   "keywords": [],
   "author": "Anna Richardson",
