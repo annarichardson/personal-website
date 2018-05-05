@@ -4,9 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import './Image.css';
+import ImageDiv from './Image.styles';
 
 export default class Image extends Component {
   constructor(props) {
@@ -17,13 +15,35 @@ export default class Image extends Component {
   }
 
   render() {
+    const {
+      src,
+      height,
+      width,
+      className,
+      onClick,
+      alt,
+    } = this.props;
     return (
-      <div className="Image">
-        Image
-      </div>
+      <ImageDiv
+        className={ className }
+        src={ src }
+        height={ height }
+        width={ width }
+        alt={ alt }
+        onClick={ onClick }
+      />
     );
   }
 }
 
-Image.propTypes = {};
-
+if (process.env.NODE_ENV !== `production`) {
+  const PropTypes = require(`prop-types`); // eslint-disable-line
+  Image.propTypes = {
+    src: PropTypes.string.isRequired,
+    height: PropTypes.any,
+    width: PropTypes.any,
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    alt: PropTypes.string.isRequired,
+  };
+}

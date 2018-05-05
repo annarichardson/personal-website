@@ -15,6 +15,11 @@ import { Helmet } from 'react-helmet';
 
 import routes from 'root/routes';
 
+import {
+  AppContainer,
+  PageWrap,
+} from './App.styles';
+
 // Uncomment the section below for performance testing
 // import Perf from 'react-addons-perf';
 
@@ -33,20 +38,20 @@ export class App extends PureComponent {
   render() {
     return (
       <Router>
-        <div className="App">
+        <AppContainer>
           <Helmet>
             <title>
-              Your App
+              Anna&apos;s Website
             </title>
           </Helmet>
-          <div className="page-wrap">
+          <PageWrap>
             <Switch>
               {
                 routes.map((r) => <Route key={r.path} {...r} />)
               }
             </Switch>
-          </div>
-        </div>
+          </PageWrap>
+        </AppContainer>
       </Router>
     );
   }

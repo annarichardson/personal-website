@@ -1,0 +1,5 @@
+describe('HeaderText', () => {
+  it('renders', () => {
+
+  });
+});

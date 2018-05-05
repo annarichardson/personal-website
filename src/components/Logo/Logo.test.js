@@ -1,5 +1,0 @@
-describe('Logo', () => {
-  it('renders', () => {
-
-  });
-});

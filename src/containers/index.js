@@ -1,11 +1,11 @@
 import Alert from './Alert';
-import Header from './Header';
-import Map from './Map';
-import ContactForm from './ContactForm';
+import Contact from './Contact';
+import Menu from './Menu';
+import Profile from './Profile';
 
 export default {
   Alert,
-  Header,
-  Map,
-  ContactForm,
+  Contact,
+  Menu,
+  Profile,
 };

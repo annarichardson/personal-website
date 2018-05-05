@@ -1,5 +1,0 @@
-describe('Map', () => {
-  it('renders', () => {
-
-  });
-});
