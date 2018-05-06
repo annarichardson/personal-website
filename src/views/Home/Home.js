@@ -54,10 +54,9 @@ export class Home extends Component {
     const distanceFromTop = scrollHeight();
     const titleHeight = this.title.clientHeight;
     const profileLocation = profileHeight + titleHeight;
-    const experienceLocation = profileHeight + titleHeight + experienceHeight;
-    const skillsLocation = profileHeight + titleHeight + experienceHeight + skillsHeight;
-    const contactLocation = profileHeight + titleHeight + experienceHeight + skillsHeight + contactHeight;
-
+    const experienceLocation = profileLocation + experienceHeight;
+    const skillsLocation = experienceLocation + skillsHeight;
+    const contactLocation = skillsLocation + contactHeight;
     if (distanceFromTop > 0 && distanceFromTop < titleHeight) {
       selectSection(`title`);
     } else if (distanceFromTop > titleHeight && distanceFromTop < profileLocation) {

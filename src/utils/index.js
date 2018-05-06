@@ -12,7 +12,7 @@ export const documentHeight = () => {
 };
 
 export const scrollHeight = () => {
-  return Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + window.scrollY;
+  return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 };
 
 export const DESKTOP_WIDTH = 992;
