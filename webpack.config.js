@@ -57,6 +57,7 @@ module.exports = {
     app: './index',
   },
   output: {
+    path: path.join(__dirname, './build'),
     filename: isProd ? '[name][chunkhash].js' : '[name].js',
     publicPath: '/build/',
   },
