@@ -6,7 +6,7 @@
     "start": "NODE_ENV=development webpack-dev-server",
     "lint-fix": "eslint --fix",
     "test": "jest",
-    "build": "API_ENV=production NODE_ENV=production webpack -p",
+    "build": "API_ENV=production NODE_ENV=production webpack",
     "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
   },
   "keywords": [],
