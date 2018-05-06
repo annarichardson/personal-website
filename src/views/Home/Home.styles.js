@@ -5,6 +5,7 @@
 
 import styled from 'styled-components';
 import HorizontalLine from 'components/HorizontalLine';
+import Profile from 'containers/Profile';
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -47,6 +48,10 @@ const Line = styled(HorizontalLine)`
   margin: 0 auto;
 `;
 
+const ProfileSection = styled(Profile)`
+
+`;
+
 export {
   ImageSection,
   NameWrapper,
@@ -54,4 +59,5 @@ export {
   HomeContainer,
   LastName,
   Line,
+  ProfileSection,
 };

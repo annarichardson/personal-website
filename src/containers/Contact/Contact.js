@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {
   ContactContainer,
@@ -28,9 +28,16 @@ export default class Contact extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.contact, `contact`);
+  }
+
   render() {
     return (
-      <ContactContainer>
+      <ContactContainer
+        id="contact"
+        innerRef={(node) => { this.contact = node; }}
+      >
         <SectionContainer>
           <Header>
             Contact
@@ -66,5 +73,7 @@ export default class Contact extends Component {
   }
 }
 
-Contact.propTypes = {};
+Contact.propTypes = {
+  getRef: PropTypes.func,
+};
 

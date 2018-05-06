@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
 
@@ -28,9 +28,16 @@ export default class Profile extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.profile, `profile`);
+  }
+
   render() {
     return (
-      <ProfileContainer>
+      <ProfileContainer
+        id="profile"
+        innerRef={(node) => { this.profile = node; }}
+      >
         <HeaderText>
           Profile
         </HeaderText>
@@ -77,5 +84,7 @@ export default class Profile extends Component {
   }
 }
 
-Profile.propTypes = {};
+Profile.propTypes = {
+  getRef: PropTypes.func,
+};
 

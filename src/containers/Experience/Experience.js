@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
 import ExperienceItem from 'components/ExperienceItem';
@@ -113,6 +113,10 @@ export default class Experience extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.experience, `experience`);
+  }
+
   render() {
     const workExperiences = WORK_EXPERIENCES.map((e) => {
       return <ExperienceItem data={ e } key={ e.title } />;
@@ -127,7 +131,10 @@ export default class Experience extends Component {
     });
 
     return (
-      <ExperienceContainer>
+      <ExperienceContainer
+        id="experience"
+        innerRef={(node) => { this.experience = node; }}
+      >
         <TextWrapper>
           <HeaderText>
             Experience
@@ -153,5 +160,7 @@ export default class Experience extends Component {
   }
 }
 
-Experience.propTypes = {};
+Experience.propTypes = {
+  getRef: PropTypes.func,
+};
 

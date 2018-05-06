@@ -7,13 +7,12 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 
 // import alert from './alert/reducers';
-import pending from './pending/reducers';
+import select from './select/reducers';
 
 export const history = createHistory();
 
 const rootReducer = combineReducers({
-  // alert,
-  pending,
+  select,
 });
 
 const middlewares = [thunk];
