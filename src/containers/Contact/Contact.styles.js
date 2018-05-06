@@ -10,7 +10,9 @@ import FaGithubSquare from 'react-icons/lib/fa/github-square';
 
 import HeaderText from 'components/HeaderText';
 import HorizontalLine from 'components/HorizontalLine';
+import SectionWrap from 'components/SectionWrap';
 
+import media from 'utils/media';
 import { MEDIUM_GREY, PRIMARY_COLOR } from 'root/theme';
 
 const ContactContainer = styled.div`
@@ -18,13 +20,7 @@ const ContactContainer = styled.div`
   width: 100%;
 `;
 
-const SectionContainer = styled.div`
-  max-width: 1200px;
-  padding: 40px 180px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1100px;
-  box-sizing: border-box;
+const SectionContainer = styled(SectionWrap)`
 `;
 
 const Wrapper = styled.div`
@@ -33,12 +29,16 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: felx-start;
   margin: 4rem 0;
-
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 `;
 
 const SectionWrapper = styled.div`
   flex-basis: 48%;
   margin: 0 auto;
+  ${media.desktop`
+    flex-basis: 100%;
+  `}
 `;
 
 const Header = styled(HeaderText)`
@@ -60,11 +60,7 @@ const ContactText = styled.a`
 `;
 
 const ContactItem = styled.div`
-  display: inline-block;
   margin-bottom: 2rem;
-  &:last-of-type {
-    margin-bottom: 0;
-  }
   &:hover {
     & a, & svg {
       color: ${PRIMARY_COLOR};

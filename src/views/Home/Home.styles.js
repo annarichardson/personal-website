@@ -4,7 +4,7 @@
  */
 
 import styled from 'styled-components';
-import HorizontalLine from 'components/HorizontalLine';
+import media from 'utils/media';
 
 const HomeContainer = styled.div`
   height: 100%;
@@ -22,9 +22,6 @@ const ImageSection = styled.div`
   justify-content: center;
 `;
 
-const NameWrapper = styled.div`
-`;
-
 const Name = styled.h1`
   margin: 0 auto;
   display: inline-block;
@@ -34,24 +31,18 @@ const Name = styled.h1`
   padding-bottom: 5px;
   border-bottom: solid white 0.5px;
   font-weight: 600;
+  ${media.phone`
+    font-size: 2.25rem;
+  `}
 `;
 
 const LastName = styled.span`
   font-weight: 300;
 `;
 
-const Line = styled(HorizontalLine)`
-  background-color: white;
-  width: 90%;
-  max-width: 450px;
-  margin: 0 auto;
-`;
-
 export {
   ImageSection,
-  NameWrapper,
   Name,
   HomeContainer,
   LastName,
-  Line,
 };

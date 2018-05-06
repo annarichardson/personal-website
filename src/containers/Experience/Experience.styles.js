@@ -12,15 +12,6 @@ const ExperienceContainer = styled.div`
   background-color: ${BACKGROUND_GREY};
 `;
 
-const TextWrapper = styled.div`
-  max-width: 1200px;
-  padding: 40px 180px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1100px;
-  box-sizing: border-box;
-`;
-
 const SubHeader = styled.h2`
   color: ${PRIMARY_COLOR};
   font-family: 'Open Sans', sans-serif;
@@ -30,6 +21,5 @@ const SubHeader = styled.h2`
 
 export {
   ExperienceContainer,
-  TextWrapper,
   SubHeader,
 };

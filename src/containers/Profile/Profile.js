@@ -4,16 +4,17 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
+import SectionWrap from 'components/SectionWrap';
 
 import profile from 'assets/profile.jpg';
 
 import {
   ProfileContainer,
   Wrapper,
-  SectionWrapper,
+  SectionContainer,
   SubHeader,
   Content,
   ContentHeader,
@@ -28,54 +29,65 @@ export default class Profile extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.profile, `profile`);
+  }
+
   render() {
     return (
-      <ProfileContainer>
-        <HeaderText>
-          Profile
-        </HeaderText>
-        <Wrapper>
-          <SectionWrapper>
-            <SubHeader>
-              About Me
-            </SubHeader>
-            <Content>
-              {'I am a developer, chronic puzzle-seeker and lifelong learner. \
-              When I’m not building cool stuff, you can find me exploring the outdoors skiing, \
-              rock climbing, or bicycling. Want to work together? I’d love to hear from you.'}
-            </Content>
-          </SectionWrapper>
-          <SectionWrapper style={ { textAlign: 'center' } }>
-            <ProfileImage height={ 200 } width={ 200 } src={ profile } alt="profile image" />
-          </SectionWrapper>
-          <SectionWrapper>
-            <SubHeader>
-              Details
-            </SubHeader>
-            <ContentHeader>
-              Name:
-            </ContentHeader>
-            <Content>
-              Anna Richardson
-            </Content>
-            <ContentHeader>
-              Current Job Title:
-            </ContentHeader>
-            <Content>
-              Senior Software Engineer
-            </Content>
-            <ContentHeader>
-              Location:
-            </ContentHeader>
-            <Content>
-              Boston, MA
-            </Content>
-          </SectionWrapper>
-        </Wrapper>
+      <ProfileContainer
+        id="profile"
+        innerRef={(node) => { this.profile = node; }}
+      >
+        <SectionWrap>
+          <HeaderText>
+            Profile
+          </HeaderText>
+          <Wrapper>
+            <SectionContainer>
+              <SubHeader>
+                About Me
+              </SubHeader>
+              <Content>
+                {'I am a developer, chronic puzzle-seeker and lifelong learner. \
+                When I’m not building cool stuff, you can find me exploring the outdoors skiing, \
+                rock climbing, or bicycling. Want to work together? I’d love to hear from you.'}
+              </Content>
+            </SectionContainer>
+            <SectionContainer style={ { textAlign: 'center' } }>
+              <ProfileImage height={ 200 } width={ 200 } src={ profile } alt="profile image" />
+            </SectionContainer>
+            <SectionContainer>
+              <SubHeader>
+                Details
+              </SubHeader>
+              <ContentHeader>
+                Name:
+              </ContentHeader>
+              <Content>
+                Anna Richardson
+              </Content>
+              <ContentHeader>
+                Current Job Title:
+              </ContentHeader>
+              <Content>
+                Senior Software Engineer
+              </Content>
+              <ContentHeader>
+                Location:
+              </ContentHeader>
+              <Content>
+                Boston, MA
+              </Content>
+            </SectionContainer>
+          </Wrapper>
+        </SectionWrap>
       </ProfileContainer>
     );
   }
 }
 
-Profile.propTypes = {};
+Profile.propTypes = {
+  getRef: PropTypes.func,
+};
 

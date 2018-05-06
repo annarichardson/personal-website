@@ -4,15 +4,15 @@
  */
 
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
 import ExperienceItem from 'components/ExperienceItem';
 import HorizontalLine from 'components/HorizontalLine';
+import SectionWrap from 'components/SectionWrap';
 
 import {
   ExperienceContainer,
-  TextWrapper,
   SubHeader,
 } from './Experience.styles';
 
@@ -113,6 +113,10 @@ export default class Experience extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getRef(this.experience, `experience`);
+  }
+
   render() {
     const workExperiences = WORK_EXPERIENCES.map((e) => {
       return <ExperienceItem data={ e } key={ e.title } />;
@@ -127,8 +131,11 @@ export default class Experience extends Component {
     });
 
     return (
-      <ExperienceContainer>
-        <TextWrapper>
+      <ExperienceContainer
+        id="experience"
+        innerRef={(node) => { this.experience = node; }}
+      >
+        <SectionWrap>
           <HeaderText>
             Experience
           </HeaderText>
@@ -147,11 +154,13 @@ export default class Experience extends Component {
           </SubHeader>
           { leadership }
           <HorizontalLine />
-        </TextWrapper>
+        </SectionWrap>
       </ExperienceContainer>
     );
   }
 }
 
-Experience.propTypes = {};
+Experience.propTypes = {
+  getRef: PropTypes.func,
+};
 
