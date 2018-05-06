@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import FaMapMarker from 'react-icons/lib/fa/map-marker';
 import FaExternalLink from 'react-icons/lib/fa/external-link';
 
+import media from 'utils/media';
 import { MEDIUM_GREY, PRIMARY_COLOR } from 'root/theme';
 
 const Header = styled.h3`
@@ -30,14 +31,21 @@ const ItemContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 `;
 
 const HeaderWrapper = styled.div`
   flex-basis: 30%;
+  ${media.desktop`
+    flex-basis: 100%;
+  `}
 `;
 
 const BodyWrapper = styled.div`
   flex-basis: 70%;
+  ${media.desktop`
+    flex-basis: 100%;
+  `}
 `;
 
 const Title = styled.h3`
@@ -73,6 +81,7 @@ const LocationIcon = styled(FaMapMarker)`
 const LocationWrapper = styled.div`
   display: inline-block;
   margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 const LinkIcon = styled(FaExternalLink)`

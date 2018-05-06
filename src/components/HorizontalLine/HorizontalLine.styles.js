@@ -11,7 +11,7 @@ import { DARK_GREY } from 'root/theme';
 
 const Line = styled.hr`
   border: 0;
-  border-top: 1px solid ${DARK_GREY};
+  border-top: 2px solid ${DARK_GREY};
   opacity: 0.2;
   margin-bottom: 2rem;
 `;

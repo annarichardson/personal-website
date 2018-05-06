@@ -12,7 +12,6 @@ import selectActions from 'store/select/actions';
 import Profile from 'containers/Profile';
 import Experience from 'containers/Experience';
 import Skills from 'containers/Skills';
-import Menu from 'containers/Menu';
 import Contact from 'containers/Contact';
 
 import { scrollHeight } from 'utils';
@@ -75,7 +74,6 @@ export class Home extends Component {
   render() {
     return (
       <HomeContainer>
-        <Menu />
         <ImageSection innerRef={(node) => { this.title = node; }}>
           <Name>
             Anna

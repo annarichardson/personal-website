@@ -1,4 +1,4 @@
-describe('Alert', () => {
+describe('SectionWrap', () => {
   it('renders', () => {
 
   });

@@ -7,10 +7,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import HeaderText from 'components/HeaderText';
+import SectionWrap from 'components/SectionWrap';
 import Skill from 'components/Skill';
 
 import {
-  TextWrapper,
   SkillsWrapper,
   SectionWrapper,
   Wrapper,
@@ -92,7 +92,7 @@ export default class Skills extends Component {
         id="skills"
         innerRef={(node) => { this.skills = node; }}
       >
-        <TextWrapper>
+        <SectionWrap>
           <HeaderText>
             Skills
           </HeaderText>
@@ -104,7 +104,7 @@ export default class Skills extends Component {
               { skills2 }
             </SectionWrapper>
           </Wrapper>
-        </TextWrapper>
+        </SectionWrap>
       </SkillsWrapper>
     );
   }
