@@ -14,6 +14,7 @@ import {
   Dates,
   Title,
   Description,
+  DescriptionItem,
   Location,
   LocationIcon,
   LocationWrapper,
@@ -53,6 +54,14 @@ export default class ExperienceItem extends Component {
         </LinkWrapper>
       ) : null;
 
+    const descriptionItems = (data.description).map((e, i) => {
+      return (
+        <DescriptionItem key={ i } >
+          { e }
+        </DescriptionItem>
+      );
+    });
+
     return (
       <ItemContainer className={ className }>
         <HeaderWrapper>
@@ -68,7 +77,7 @@ export default class ExperienceItem extends Component {
             { data.title }
           </Title>
           <Description>
-            { data.description }
+            { descriptionItems }
           </Description>
           { location }
           { link }
