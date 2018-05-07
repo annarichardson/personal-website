@@ -20,7 +20,7 @@ export default class Bar extends Component {
     const { value, className } = this.props;
     return (
       <BarContainer className={ className }>
-        <BarValue value={ value } maxValue={ 5 } />
+        <BarValue value={ value } maxValue={ 6 } />
       </BarContainer>
     );
   }
