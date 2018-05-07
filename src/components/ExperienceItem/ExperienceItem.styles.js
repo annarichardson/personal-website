@@ -55,13 +55,18 @@ const Title = styled.h3`
   margin-bottom: 0.5rem;
 `;
 
-const Description = styled.p`
+const Description = styled.ul`
   font-family: 'Open Sans', sans-serif;
   color: ${MEDIUM_GREY};
   font-weight: 200;
   line-height: 1.5;
   margin-bottom: 0.5rem;
   margin-top: 0;
+  list-style-type: none;
+  padding: 0;
+`;
+
+const DescriptionItem = styled.li`
 `;
 
 const Location = styled.p`
@@ -108,6 +113,7 @@ export {
   BodyWrapper,
   Title,
   Description,
+  DescriptionItem,
   Location,
   LocationIcon,
   LocationWrapper,

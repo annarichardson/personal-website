@@ -16,56 +16,7 @@ import {
   Wrapper,
 } from './Skills.styles';
 
-const SKILLS = [
-  {
-    title: "React",
-    rating: 4,
-  },
-  {
-    title: "Redux",
-    rating: 4,
-  },
-  {
-    title: "Django",
-    rating: 4,
-  },
-  {
-    title: "Javascript",
-    rating: 4,
-  },
-  {
-    title: "Python",
-    rating: 4,
-  },
-  {
-    title: "HTML",
-    rating: 4,
-  },
-  {
-    title: "CSS",
-    rating: 4,
-  },
-  {
-    title: "C++",
-    rating: 3,
-  },
-  {
-    title: "C",
-    rating: 3,
-  },
-  {
-    title: "Git",
-    rating: 3,
-  },
-  {
-    title: "PostgreSQL",
-    rating: 3,
-  },
-  {
-    title: "Express.js",
-    rating: 3,
-  },
-];
+import SKILLS from './data';
 
 export default class Skills extends Component {
   constructor(props) {
