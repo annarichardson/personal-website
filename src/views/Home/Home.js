@@ -14,7 +14,7 @@ import Experience from 'containers/Experience';
 import Skills from 'containers/Skills';
 import Contact from 'containers/Contact';
 
-import { scrollHeight } from 'utils';
+import { middleScreenLocation } from 'utils';
 
 import {
   ImageSection,
@@ -51,7 +51,7 @@ export class Home extends Component {
       skillsHeight,
       contactHeight,
     } = this.state;
-    const distanceFromTop = scrollHeight();
+    const distanceFromTop = middleScreenLocation();
     const titleHeight = this.title.clientHeight;
     const profileLocation = profileHeight + titleHeight;
     const experienceLocation = profileLocation + experienceHeight;

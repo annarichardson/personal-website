@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
 `;
 
 const ImageSection = styled.div`
-  background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Wallpapers-HD-Forest-PIC-WPC003968.jpg");
+  background-image: url("https://res.cloudinary.com/hthkr6vbm/image/upload/v1525657773/background.jpg");
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
