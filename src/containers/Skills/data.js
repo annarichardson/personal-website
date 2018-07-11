@@ -68,6 +68,10 @@ export const SKILLS = [
     rating: 3,
   },
   {
+    title: "React Native",
+    rating: 3,
+  },
+  {
     title: "Photoshop",
     rating: 3,
   },

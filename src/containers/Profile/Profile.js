@@ -49,9 +49,10 @@ export default class Profile extends Component {
                 About Me
               </SubHeader>
               <Content>
-                {'I am a developer, chronic puzzle-seeker and lifelong learner. \
-                When I’m not building cool stuff, you can find me exploring the outdoors skiing, \
-                rock climbing, or bicycling. Want to work together? I’d love to hear from you.'}
+                {'I am a developer, puzzle-seeker and classical history lover. \
+                When I’m not building cool stuff, you can find me exploring \
+                the outdoors skiing, rock climbing, or bicycling. \
+                Want to work together? I’d love to hear from you.'}
               </Content>
             </SectionContainer>
             <SectionContainer style={ { textAlign: 'center' } }>
