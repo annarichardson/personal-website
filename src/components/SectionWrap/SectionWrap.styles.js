@@ -8,7 +8,7 @@ import media from 'utils/media';
 
 const Wrapper = styled.div`
   max-width: 1200px;
-  padding: 40px 180px;
+  padding: 40px 150px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;

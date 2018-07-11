@@ -5,9 +5,9 @@ export const EXPERIENCES = {
       company: "Cogo Labs",
       dates: "October 2017 - present",
       description: [
-        "- Lead developer and product manager for a new product to attract web traffic",
-        "- Overseeing most successful of twelve products initiated by Minerva team",
-        "- Built product using React, Django, and PostgreSQL",
+        "- Lead developer and product manager of fastest growing product by Minerva team",
+        "- Designed architecture for new web app with React, Redux, Django, and PostgreSQL",
+        "- Created algorithm to capture highest quality video content using YouTube API",
         "- Chosen to lead intern program; managing six mentors and ten interns",
       ],
       location: "Cambridge, MA",
@@ -22,7 +22,7 @@ export const EXPERIENCES = {
       dates: "June 2016 - October 2017",
       description: [
         "- Participated in developing four vertical products",
-        "- Mentored a team of five summer interns",
+        "- Mentored a team of five summer interns; managed two engineer interns",
         "- Initiated and organized company-wide hackathon with 30 participants",
       ],
       location: "Cambridge, MA",
